@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Classe para objeto do tipo jogo, onde est�o contidos, valores e m�todos para o mesmo.
- * @author Carlos Eduardo, Alefe e Aisllan
+ * @author Carlos Eduardo, Alefe, Artur e Aisllan
  */
 
 public class Jogo {
@@ -122,7 +122,7 @@ public class Jogo {
 						titulo = (TituloDePropriedade)tabuleiro.getCartas().get(jogadorDaVez.getPosicaoAtual());
 						
 						System.out.println("O jogador " + jogadorDaVez.getNome() + "(" + jogadorDaVez.getPeao()
-						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + movimento
+						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + (movimento+1)
 						+ " - " + ((TituloDePropriedade) tabuleiro.getCartas().get(movimento)).getNome());
 						
 						if (!titulosVendidos.contains(jogadorDaVez.getPosicaoAtual())) {
@@ -135,15 +135,15 @@ public class Jogo {
 												
 					} else if (tabuleiro.getCartas().get(movimento).getClass().equals(companhia.getClass())) {
 						System.out.println("O jogador " + jogadorDaVez.getNome() + "(" + jogadorDaVez.getPeao()
-						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + movimento
+						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + (movimento+1)
 						+ " - " + ((Companhia) tabuleiro.getCartas().get(movimento)).getNome());
 					} else if (tabuleiro.getCartas().get(movimento).getClass().equals(sorteReves.getClass())) {
 						System.out.println("O jogador " + jogadorDaVez.getNome() + "(" + jogadorDaVez.getPeao()
-						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + movimento
+						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + (movimento+1)
 						+ " - " + ((CartaSorteReves) tabuleiro.getCartas().get(movimento)).getDescricao());
 					} else if (tabuleiro.getCartas().get(movimento).getClass().equals(cartaEspecial.getClass())) {
 						System.out.println("O jogador " + jogadorDaVez.getNome() + "(" + jogadorDaVez.getPeao()
-						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + movimento
+						+ ") tirou " + d1 + ", " + d2 + " e o pe�o avan�ou para a casa " + (movimento+1)
 						+ " - " + ((CartaEspecial) tabuleiro.getCartas().get(movimento)).getNome());
 					}
 					
@@ -196,7 +196,7 @@ public class Jogo {
 	 * @param dado1
 	 * @param dado2
 	 * @return retorna o movimento de avan�o
-	 * @author Carlos Eduardo, Alefe e Aisllan
+	 * @author Carlos Eduardo, Alefe, Artur e Aisllan
 	 **/
 	
 	public int anda(int posicaoAntiga, int dado1, int dado2) {
@@ -209,7 +209,7 @@ public class Jogo {
 	 * M�todo para escolher a cor do pe�o
 	 * @param cor
 	 * @return retorna a cor do pe�o de cada jogador
-	 * @author Carlos Eduardo, Alefe e Aisllan
+	 * @author Carlos Eduardo, Alefe, Artur e Aisllan
 	 **/
 
 	public Peao escolhePeao(int cor) {
@@ -247,7 +247,7 @@ public class Jogo {
 	 * M�todo que realiza a negocia��o de compra de t�tulo de propriedade
 	 * @param titulo
 	 * @param jogadorDaVez
-	 * @author Carlos Eduardo, Alefe e Aisllan
+	 * @author Carlos Eduardo, Alefe, Artur e Aisllan
 	 **/
 	
 	public void negociaTituloDePropriedade(TituloDePropriedade titulo, Jogador jogadorDaVez) {

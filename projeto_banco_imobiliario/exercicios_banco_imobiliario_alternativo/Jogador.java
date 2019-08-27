@@ -15,7 +15,7 @@ public class Jogador {
 	public Jogador(String nome, Peao peao) {
 		this.nome = nome;
 		this.dinheiro = 1500;
-		this.posicaoAtual = 0;
+		this.posicaoAtual = -1;
 		this.peao = peao;
 		this.opcoes.add("jogar");
 		this.opcoes.add("sair");
